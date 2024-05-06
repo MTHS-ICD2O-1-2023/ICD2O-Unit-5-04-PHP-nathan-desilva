@@ -37,19 +37,30 @@
             </div>
             <div class="mdl-layout__left">
               <?php
-
-              // input
+              // Define an array to map day values to their names
+              $dayNames = [
+                "monday" => "Monday",
+                "tuesday" => "Tuesday",
+                "wednesday" => "Wednesday",
+                "thursday" => "Thursday",
+                "friday" => "Friday",
+                "saturday" => "Saturday",
+                "sunday" => "Sunday"
+              ];
               $selectedDay = $_POST["day-selected"];
+              $selectedDayName = $dayNames[$selectedDay];
               $age = $_POST["age-entered"];
-              $dayTuesdayChecked = isset($_POST["tuesday"]) && $_POST["day-of-week"] === "Tuesday";
-              $dayThursdayChecked = isset($_POST["thursday"]) && $_POST["day-of-week"] === "Thursday";
-              
-              // Process
+
+              // Check if Tuesday or Thursday is selected
+              $dayTuesdayChecked = isset($_POST["day-of-week"]) && $_POST["day-of-week"] === "tuesday";
+              $dayThursdayChecked = isset($_POST["day-of-week"]) && $_POST["day-of-week"] === "thursday";
+
+              // process
               if (($dayTuesdayChecked == true || $dayThursdayChecked == true) || ($age > 12 && $age < 21)) {
-                  // Output 
-                  echo "The day is " . $selectedDay . " and you are " . $age . " so you get the student discount.";
+                // output
+                echo "The day is " . $selectedDayName . " and your age is " . $age . " so you get the student discount!";
               } else {
-                  echo "The day is " . $selectedDay . " and you are " . $age . " so you have to pay the regular price.";
+                echo "The day is " . $selectedDayName . " and your age is " . $age . " so you must pay the regular price.";
               }
 
               ?>
