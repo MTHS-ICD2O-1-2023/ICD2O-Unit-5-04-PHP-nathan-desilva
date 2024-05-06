@@ -33,41 +33,42 @@
       </h3>
       <br />
       <div class="page-content-php">
-        <form action="answer.php" method="POST">
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-monday">
-            <input type="radio" id="option-monday" class="mdl-radio__button" name="day-of-week" value="1" checked>
+        <form method="post" action="answer.php">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="monday">
+            <input type="radio" id="monday" class="mdl-radio__button" name="day-selected" value="monday">
             <span class="mdl-radio__label">Monday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-tuesday">
-            <input type="radio" id="option-tuesday" class="mdl-radio__button" name="day-of-week" value="2">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="tuesday">
+            <input type="radio" id="tuesday" class="mdl-radio__button" name="day-selected" value="tuesday">
             <span class="mdl-radio__label">Tuesday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-wednesday">
-            <input type="radio" id="option-wednesday" class="mdl-radio__button" name="day-of-week" value="3">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="wednesday">
+            <input type="radio" id="wednesday" class="mdl-radio__button" name="day-selected" value="wednesday">
             <span class="mdl-radio__label">Wednesday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-thursday">
-            <input type="radio" id="option-thursday" class="mdl-radio__button" name="day-of-week" value="4">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="thursday">
+            <input type="radio" id="thursday" class="mdl-radio__button" name="day-selected" value="thursday">
             <span class="mdl-radio__label">Thursday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-friday">
-            <input type="radio" id="option-friday" class="mdl-radio__button" name="day-of-week" value="5">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="friday">
+            <input type="radio" id="friday" class="mdl-radio__button" name="day-selected" value="friday">
             <span class="mdl-radio__label">Friday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-saturday">
-            <input type="radio" id="option-saturday" class="mdl-radio__button" name="day-of-week" value="6">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="saturday">
+            <input type="radio" id="saturday" class="mdl-radio__button" name="day-selected" value="saturday">
             <span class="mdl-radio__label">Saturday</span>
           </label>
           <br />
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-sunday">
-            <input type="radio" id="option-sunday" class="mdl-radio__button" name="day-of-week" value="7">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="sunday">
+            <input type="radio" id="sunday" class="mdl-radio__button" name="day-selected" value="sunday">
             <span class="mdl-radio__label">Sunday</span>
           </label>
+          <br />
           <br />
           <div class="mdl-textfield mdl-js-textfield">
             <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age-entered" name="age-entered" />

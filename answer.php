@@ -30,7 +30,7 @@
         <img src="./images/museum.png" alt="museum" width="250" />
       </div>
       <div class="page-content-php">
-        <div name="age-entered">
+        <div name="day-selected">
           <div class="mdl-layout__header-row">
             <br />
             <div class="mdl-layout__content">
@@ -38,18 +38,18 @@
             <div class="mdl-layout__left">
               <?php
 
-              //input
+              // input
+              $selectedDay = $_POST["day-selected"];
               $age = $_POST["age-entered"];
-              $dayTuesdayChecked = $_POST["option-tuesday"];
-              $dayThursdayChecked = $_POST["option-thursday"];
-              $day = $_POST["day-of-week"];
-
-              // process
+              $dayTuesdayChecked = isset($_POST["tuesday"]) && $_POST["day-of-week"] === "Tuesday";
+              $dayThursdayChecked = isset($_POST["thursday"]) && $_POST["day-of-week"] === "Thursday";
+              
+              // Process
               if (($dayTuesdayChecked == true || $dayThursdayChecked == true) || ($age > 12 && $age < 21)) {
-                // output
-                echo "The day is " . $day . " and you are " . $age . " so you get the student discount.";
+                  // Output 
+                  echo "The day is " . $selectedDay . " and you are " . $age . " so you get the student discount.";
               } else {
-                echo "The day is ". $day . " and you are " . $age . " so you have to pay the regular price.";
+                  echo "The day is " . $selectedDay . " and you are " . $age . " so you have to pay the regular price.";
               }
 
               ?>
