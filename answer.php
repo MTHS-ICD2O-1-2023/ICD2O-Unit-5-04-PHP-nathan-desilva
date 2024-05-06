@@ -37,7 +37,8 @@
             </div>
             <div class="mdl-layout__left">
               <?php
-              // Define an array to map day values to their names
+
+              // input
               $dayNames = [
                 "monday" => "Monday",
                 "tuesday" => "Tuesday",
