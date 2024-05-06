@@ -40,9 +40,9 @@
 
               //input
               $age = $_POST["age-entered"];
-              $dayTuesdayChecked = $_POST["option-tuesday"];
-              $dayThursdayChecked = $_POST["option-thursday"];
-              $day = $_POST = ["day-selected"];
+              $dayTuesdayChecked = $_POST["day-of-week"];
+              $dayThursdayChecked = $_POST["day-of-week"];
+              $day = $_POST["day-selected"];
 
               // process
               if (($dayTuesdayChecked == true || $dayThursdayChecked == true) || ($age > 12 && $age < 21)) {
