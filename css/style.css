@@ -1,4 +1,45 @@
-/* Created by: Mr. Coxall
-* Created on: Sep 2020
+/* Created by: Nathan De Silva
+* Created on: April 2024
 * This file contains the CSS for index.html
 */
+
+.mdl-ripple {
+  background: #000;
+  opacity: 0.001;
+}
+
+.mdl-layout__header-row {
+  justify-content: center;
+  padding: 0;
+  color: rgb(248, 248, 248);
+}
+
+.mdl-layout__content {
+  padding-left: 20pt;
+  padding-right: 20pt;
+  padding-top: 20pt;
+}
+
+.mdl-layout__left {
+  padding-right: 350pt;
+  padding-top: 20pt;
+  font-size: 1.5rem;
+}
+
+.mdl-textfield__error {
+  color: #fff;
+}
+
+.page-content {
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+}
+
+body {
+  background-color: rgba(199, 64, 154, 0.73);
+}
+
+img {
+  float: right;
+}

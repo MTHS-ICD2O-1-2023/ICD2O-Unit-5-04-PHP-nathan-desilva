@@ -29,23 +29,37 @@
       <div class="right-image">
         <img src="./images/movie_ratings.jpg" alt="movie_ratings" width="250" />
       </div>
-      <h3>Enter your age.
-      </h3>
       <div class="page-content-php">
-        <form action="answer.php" method="POST">
-          <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="age-entered">
-            <label class="mdl-textfield__label" for="age-entered">Enter a number ...</label>
-            <span class="mdl-textfield__error">Input is not a number!</span>
+        <div name="age-entered">
+          <div class="mdl-layout__header-row">
+            <br />
+            <div class="mdl-layout__content">
+            </div>
+            <div class="mdl-layout__left">
+              <?php
+
+              $age = $_POST["age-entered"];
+
+              // process
+              if ($age >= 17) {
+                // output
+                echo "You are " . $age . " so you can watch an R rated movie alone.";
+                //process
+              } elseif ($age >= 13) {
+                // output
+                echo "You are " . $age . " so you can watch a PG-13 movie alone.";
+              } elseif ($age >= 9) {
+                // output
+                echo "You are " . $age . " so you can watch a G or PG rated movie alone.";
+              } elseif ($age >= 6) {
+                // output
+                echo "You are " . $age . " so you can watch a G rated movie alone.";
+              }
+
+              ?>
+            </div>
           </div>
-          <br />
-          <br />
-          <!-- Accent-colored raised button with ripple -->
-          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" type="submit">
-            FIND MOVIE TYPE
-          </button>
-        </form>
-      </div>
+        </div>
     </main>
   </div>
 </body>
